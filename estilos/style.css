@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: grey;
+    height: 100vh;
+    width: 100vw;
+}
+
+main { 
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    overflow: hidden;
+
+
+    background-color: white;
+    border-radius: 20px;
+    width: 250px;
+    height: 500px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.736);
+
+    transition: width 1s, height 1s;
+    transition-timing-function: ease;
+    transform: translate(-50%, -50%);
+    /* O transition cria a animação, o timing fuction suaviza ela */
+}
+
+section#login > div#imagem {
+    display: block;
+    background-image: url(../imagens/image.jpg);
+    background-position: left, bottom;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section#login > div#formu {
+    display: block;
+    padding: 10px;
+}
+
+div#formu > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formu > p {
+    font-size: 0.9em;
+    margin: 12px 0px;
+}
+
+form > div.campo {
+    background-color: grey;
+    margin: 5px 0px;
+    border-radius: 7px;
+}
+
+div.campo > label {
+    display: none;
+}
+
+div.campo > span {
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    width: 20px;
+    padding: 5px;
+}
+
+div.campo > input {
+    border-radius: 7px;
+    font-size: 1em;
+    border: 3px solid white;
+    width: calc(85% - 20px);
+    /* Função calc permite redimensionar melhor as caixas */
+    height: 100%;
+    padding: 7px;
+    transform: translate(13%, -20%);
+    /* A transform sempre deve estar na ultima linha */
+}
+
+form > input[type=submit] {
+    background-color: rgb(125, 154, 174);
+    display: block;
+    width: 100%;
+    height: 5vh;
+    border: none;
+    border-radius: 5px;
+}
+
+form > input[type=submit]:hover {
+    background-color: rgb(169, 203, 227) ;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+form > a.botao {
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.34);
+    border-radius: 5px;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.359);
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+form > a.botao:hover {
+    background-color: rgb(169, 203, 227) ;;
+    border: 1px solid rgb(169, 203, 227) ;;
+    color: rgb(0, 0, 0) ;;
+    transition: 0.3s;
+    cursor: pointer;
+}
